@@ -222,7 +222,7 @@ func WithMiddlewares(middlewares ...Middleware) Option {
 // WithQueryFields returns an Option that adds the given query fields to the gateway
 func WithQueryFields(fields ...*QueryField) Option {
 	return func(g *Gateway) {
-		g.queryFields = append(g.queryFields, fields...)
+		g.queryFields = fields
 	}
 }
 
