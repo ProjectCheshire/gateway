@@ -34,11 +34,6 @@ task "build" {
     EOF
 }
 
-task "deploy" {
-    description = "Push the built artifacts to the release. assumes its running in CI"
-    command     = "ghr -t $GITHUB_TOKEN -u nautilus -r gateway $TRAVIS_TAG ./bin"
-}
-
 variables {
     files = "$(go list -v ./... | grep -iEv \"cmd|examples\")"
 }

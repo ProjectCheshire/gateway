@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/nautilus/gateway"
+	"github.com/ProjectCheshire/gateway"
 	"github.com/nautilus/graphql"
 )
 
