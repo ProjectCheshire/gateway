@@ -189,9 +189,6 @@ func mergeSchemas(sources []*ast.Schema) (*ast.Schema, error) {
 
 func mergeInterfaces(schema *ast.Schema, previousDefinition *ast.Definition, newDefinition *ast.Definition) error {
 	// descriptions
-	if previousDefinition.Description != newDefinition.Description {
-		return fmt.Errorf("conflict in interface descriptions: \"%v\" and \"%v\"", previousDefinition.Description, newDefinition.Description)
-	}
 
 	// fields
 	if len(previousDefinition.Fields) != len(newDefinition.Fields) {
