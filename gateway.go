@@ -110,7 +110,7 @@ func New(sources []*graphql.RemoteSchema, configs ...Option) (*Gateway, error) {
 		planner:        &MinQueriesPlanner{},
 		executor:       &ParallelExecutor{},
 		merger:         MergerFunc(mergeSchemas),
-		queryFields:    []*QueryField{nodeField},
+		queryFields:    []*QueryField{},
 		queryPlanCache: &NoQueryPlanCache{},
 	}
 
