@@ -386,10 +386,7 @@ func mergeFieldListEqual(list1, list2 ast.FieldList) error {
 
 func mergeFieldsEqual(field1, field2 *ast.FieldDefinition) error {
 	// if the 2 descriptions don't match
-	if field1.Description != field2.Description {
-		return fmt.Errorf("conflict in field descriptions. Found \"%v\" and \"%v\"", field1.Description, field2.Description)
-	}
-
+	// removed
 	// fields
 	if err := mergeTypesEqual(field1.Type, field2.Type); err != nil {
 		return fmt.Errorf("fields are not equal: %v", err.Error())
